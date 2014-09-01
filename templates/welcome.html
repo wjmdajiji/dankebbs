@@ -1,0 +1,53 @@
+{%extends 'basic.html' %}
+
+{% block title %}Danke BBS:讨论的好地方{% endblock %} 
+{% block content %}
+
+<!-- 登录使用的表格 -->
+<table>
+	<tr>
+		<td>用户名</td>
+		<td><input type="text" name="username"  id="username" value="邮箱/手机号"></td>
+	</tr>
+	<tr>
+		<td>密码</td>
+		<td><input type="password" name="password" id="password"></td>
+	</tr>
+</table>
+
+<!-- 注册使用的表格 -->
+<table>
+	<tr>
+		<td>用户名</td><td><input type="text" name="username"  id="username"></td>
+		<td>姓</td>
+		<td>名</td>
+		<td>他站昵称</td>
+	</tr>
+	<tr>
+		<td>登录密码</td>
+		<td><input type="password" name="password" id="password"></td>
+	</tr>
+	<tr>
+		<td>重复登录密码</td>
+		<td><input type="password" name="password2" id="password2"></td>
+	</tr>
+</table>
+
+<ul>
+	<li>@fudan.edu.cn 复旦</li>
+	<li>@mails.tsinghua.edu.cn 清华</li>
+	<li>@pku.edu.cn 北京大学</li>
+	<li>@hit.edu.cn 哈工大</li>
+	<li>@zju.edu.cn 浙江大学</li>
+	<li>@nju.edu.cn 南京大学</li>
+	<li>@sjtu.edu.cn 上海交通大学</li>
+	<li>@stu.xjtu.edu.cn 西安交通大学</li>
+	<li>@mail.ustc.edu.cn 中国科技大学 学生</li>
+	<li>@ustc.edu.cn 中国科技大学 教工</li>
+</ul>
+
+{% endblock %}
+
+{% block foot %}
+<a href="./">问题反馈</a>
+{% endblock %}
