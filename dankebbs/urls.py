@@ -6,9 +6,12 @@ import login.views
 import contact.views
 
 urlpatterns = patterns('',
-    # Examples:
-    # url(r'^$', 'dankebbs.views.home', name='home'),
-    # url(r'^blog/', include('blog.urls')),
+)
+
+urlpatterns += patterns('',
     url(r'^$', login.views.welcome),
-    url(r'^contact/$', contact.views.contact)
+)
+
+urlpatterns += patterns('',
+    url(r'^contact/$', contact.views.contact),
 )

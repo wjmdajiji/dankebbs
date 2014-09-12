@@ -1,6 +1,16 @@
 {%extends 'basic.html' %}
 
-{% block title %}Danke BBS:讨论的好地方{% endblock %} 
+{% block title %}Danke BBS:明规则讨论社区{% endblock %} 
+{% block menu %}
+<div name = "menu">
+	<div>
+	<!-- 随机选出用来提醒的本论坛的规则，愿景 -->
+		<p>为何不开放注册？</p>
+		<p>我知道了</p>
+	</div>
+
+</div>
+{% endblock menu %}
 {% block content %}
 
 <!-- 登录使用的表格 -->
@@ -48,6 +58,9 @@
 
 {% endblock %}
 
+
+
+
 {% block foot %}
-<a href="./">问题反馈</a>
+<a href= {% url "contact.views.contact" %} >问题反馈</a>
 {% endblock %}

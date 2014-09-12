@@ -3,8 +3,16 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF8">
 <title> {% block title %} 最基础的模板 {% endblock %} </title>
+{% load staticfiles %}
 {% block javascript %} {% endblock %}
-{% block css %} {% endblock %}
+{% block css %} 
+<style type = "text/css">
+html {
+	background-attachment:fixed;
+	background-image: url({% static 'background.png' %});
+}
+</style>
+{% endblock %}
 </head>
 <body>
 {% block menu %} {% endblock %}
