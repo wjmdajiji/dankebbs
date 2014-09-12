@@ -1,15 +1,33 @@
 {%extends 'basic.html' %}
 
-{% block title %}Danke BBS:明规则讨论社区{% endblock %} 
+{% block title %}Danke BBS:明规则讨论社区{% endblock %}
+{% load staticfiles %}
+{% block css %}
+<style type="text/css">
+	img.icon{
+		width : 100px;
+		height: 100px;
+	}
+	img.logo{
+		height: 100px;
+	}
+	ul.cross{
+		list-style: none;
+		margin: 0px;
+	}
+	ul.cross li{
+		display: inline;
+	}
+</style>
+{% endblock %}
 {% block menu %}
 <div name = "menu">
-	<div>
-	<!-- 随机选出用来提醒的本论坛的规则，愿景 -->
-		<p>为何不开放注册？</p>
-		<p>我知道了</p>
-	</div>
-
+<ul class="cross">
+	<li><img class="logo" src="{% static 'logo.png' %}"></li>
+	<li>关于论坛的论坛，明规则讨论</li>
+</ul>
 </div>
+<hr />
 {% endblock menu %}
 {% block content %}
 
@@ -56,11 +74,20 @@
 	<li>@ustc.edu.cn 中国科技大学 教工</li>
 </ul>
 
+<div>
+	<ul class="cross">
+		<li ><img class="icon" src="{% static 'handshake.png' %}"></li>
+		<li ><img class="icon" src="{% static 'light.png' %}"></li>
+		<li ><img class="icon" src="{% static 'tree.png' %}"></li>
+		<li ><img class="icon" src="{% static 'snake.jpg' %}"></li>
+	</ul>
+</div>
 {% endblock %}
 
 
-
-
 {% block foot %}
-<a href= {% url "contact.views.contact" %} >问题反馈</a>
+<hr />
+<div>
+	<a href= {% url "contact.views.contact" %} >问题反馈</a>
+</div>
 {% endblock %}

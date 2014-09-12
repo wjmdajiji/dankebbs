@@ -17,6 +17,21 @@ ul.errorlist{
 }
 </style>
 {% endblock %}
+
+{% block menu %}
+<div name = "menu">
+	<div name="logo">
+		<img src="{% static 'logo.png' %}">
+	</div>
+	<div>
+	<!-- 随机选出用来提醒的本论坛的规则，愿景 -->
+		<a href="{% url metarules.views.login"> 为何不开放注册？</a>
+		<button alt="点击不再提示本条规则">我知道了</button>
+	</div>
+
+</div>
+<hr />
+{% endblock menu %}
 {% block content %}
 <h1>Contact us</h1>
 <form action="." method="POST">
